@@ -2,7 +2,7 @@
 from pathlib import Path
 
 D = Path(__file__).parent
-SITE = "https://qqsleimy-alt.github.io/"
+SITE = "https://thesavebot.github.io/"
 BOT = '<a href="https://t.me/THE_SaveChatBot">@THE_SaveChatBot</a>'
 HR = '<hr id="en" style="margin:48px 0;border:0;border-top:1px solid var(--line)">'
 

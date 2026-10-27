@@ -109,7 +109,7 @@ TERMS = f"""<h1>Условия использования</h1>
 for name, title, body in (("privacy.html", "Политика конфиденциальности", PRIVACY),
                           ("terms.html", "Условия использования", TERMS)):
     (D / name).write_text(page(name, title, body), encoding="utf-8", newline="\n")
-(D / "robots.txt").write_text(f"User-agent: *\nAllow: /\nSitemap: {SITE}sitemap.xml\n", encoding="utf-8", newline="\n")
+(D / "robots.txt").write_text(f"User-agent: *\nAllow: /\nDisallow: /v/\nSitemap: {SITE}sitemap.xml\n", encoding="utf-8", newline="\n")
 urls = "".join(f"<url><loc>{SITE}{p}</loc></url>\n" for p in ("", "privacy.html", "terms.html"))
 (D / "sitemap.xml").write_text('<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
                                + urls + "</urlset>\n", encoding="utf-8", newline="\n")

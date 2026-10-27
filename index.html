@@ -8,12 +8,16 @@
 <link rel="canonical" href="https://thesavebot.github.io/">
 <link rel="icon" href="favicon.png" type="image/png">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
+<meta name="theme-color" content="#000000">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Удалили сообщение? Вы всё равно увидите — THE.SaveBot">
 <meta property="og:description" content="Бот сохраняет удалённые и изменённые сообщения в Telegram. Бесплатно.">
 <meta property="og:image" content="https://thesavebot.github.io/og.jpg">
 <meta property="og:url" content="https://thesavebot.github.io/">
 <meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Unbounded:wght@800&display=swap">
 <link rel="stylesheet" href="style.css">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@graph":[
@@ -21,54 +25,81 @@
 {"@type":"FAQPage","mainEntity":[
 {"@type":"Question","name":"Можно ли увидеть удалённое сообщение в Telegram?","acceptedAnswer":{"@type":"Answer","text":"Сам Telegram удалённое не показывает. Если заранее подключить THE.SaveBot через «Автоматизацию чатов», бот сохраняет сообщения и присылает копию, когда собеседник удалит сообщение."}},
 {"@type":"Question","name":"Собеседник узнает, что я сохраняю сообщения?","acceptedAnswer":{"@type":"Answer","text":"Нет. Бот работает на вашей стороне и ничего не пишет собеседнику."}},
-{"@type":"Question","name":"Нужен ли Telegram Premium?","acceptedAnswer":{"@type":"Answer","text":"Нет. С 2026 года «Автоматизация чатов» доступна без Telegram Premium."}},
+{"@type":"Question","name":"Нужен ли Telegram Premium?","acceptedAnswer":{"@type":"Answer","text":"Нет. «Автоматизация чатов» доступна без Telegram Premium."}},
 {"@type":"Question","name":"Это бесплатно?","acceptedAnswer":{"@type":"Answer","text":"Да. Тариф Standard бесплатный и без срока. Premium добавляет хранение до 6 месяцев и сохранение удалённого чата целиком."}}
 ]}]}
 </script>
 </head>
 <body>
-<header><div class="wrap"><img src="icon.png" alt=""><b>THE.SaveBot</b><nav><a href="#how">Как подключить</a><a href="#faq">Вопросы</a></nav></div></header>
-<main class="wrap">
-<section class="hero">
-<img src="icon.png" alt="Значок THE.SaveBot">
-<h1>Удалили сообщение?<br>Вы всё равно увидите</h1>
-<p class="lead">Бот для Telegram сохраняет удалённые и изменённые сообщения, фото, голосовые, кружки и одноразовые медиа.</p>
-<a class="btn" href="https://t.me/THE_SaveChatBot?start=src_site">Открыть бота в Telegram</a>
-<p class="note">Бесплатно · подключение за минуту · собеседник ничего не узнает</p>
-</section>
+<header><div class="wrap"><img src="icon.png" alt=""><b><a href="./">THE.SaveBot</a></b>
+<nav><a href="#can">Что умеет</a><a href="#how">Подключение</a><a href="#price">Тарифы</a><a href="#faq">Вопросы</a></nav></div></header>
 
-<h2>Что умеет бот</h2>
-<div class="grid">
-<div class="card"><div class="e">🗑️</div><h3>Удалённые сообщения</h3><p>Собеседник удалил текст, фото или голосовое — бот сразу присылает копию: кто, когда и что.</p></div>
-<div class="card"><div class="e">✏️</div><h3>Изменённые сообщения</h3><p>Видно, как было и как стало.</p></div>
-<div class="card"><div class="e">🔥</div><h3>Одноразовые медиа</h3><p>Фото и кружки «на один просмотр» — копия, если ответить на них до просмотра.</p></div>
-<div class="card"><div class="e">🛡</div><h3>Удалённый чат целиком</h3><p>Если удалили весь чат — бот присылает его файлом со всеми медиа (Premium).</p></div>
-<div class="card"><div class="e">⚠️</div><h3>Защита от мошенников</h3><p>Предупреждает об опасных ссылках и файлах в новых чатах.</p></div>
-<div class="card"><div class="e">🔐</div><h3>Приватность</h3><p>Переписка хранится зашифрованной. Удалить свои данные можно в два нажатия.</p></div>
+<main>
+<div class="wrap hero">
+  <div>
+    <p class="mark display">THE.</p>
+    <h1>Удалили сообщение? Вы всё равно увидите.</h1>
+    <p class="lead">Бот для Telegram сохраняет переписку и присылает вам всё, что собеседник удалил или изменил.</p>
+    <a class="btn" href="https://t.me/THE_SaveChatBot?start=src_site">Открыть бота в Telegram</a>
+    <p class="note">Бесплатно. Подключение за минуту. Собеседник ничего не узнает.</p>
+  </div>
+  <div class="chat" aria-label="Пример: удалённое сообщение и копия от бота">
+    <div class="who"><div class="ava">А</div><div><b>Артём</b><small>был(а) только что</small></div></div>
+    <div class="msg out">Не спишь?<time>03:01</time></div>
+    <div class="msg gone">Сообщение удалено<time>03:03</time></div>
+    <div class="bot"><img src="icon.png" alt="">
+      <div class="msg"><b>THE.SaveBot: удалено</b>Я до сих пор думаю о тебе каждый день<time>03:03</time></div>
+    </div>
+  </div>
 </div>
 
-<h2 id="how">Как подключить</h2>
-<ol class="steps">
-<li>Откройте <a href="https://t.me/THE_SaveChatBot?start=src_site">@THE_SaveChatBot</a> и нажмите «Старт».</li>
-<li>В Telegram: <b>Настройки → Telegram для бизнеса → Автоматизация чатов</b>.</li>
-<li>Вставьте <b>@THE_SaveChatBot</b> и нажмите «Добавить».</li>
-</ol>
-<p>Готово: с этого момента бот сохраняет переписку и присылает всё, что удалят или изменят. Telegram Premium не нужен.</p>
+<section id="can"><div class="wrap">
+  <h2 class="display">Что сохраняет бот</h2>
+  <ul class="can">
+    <li><span class="e">🗑️</span><b>Удалённые сообщения</b><span>Текст, фото, голосовые и файлы. Бот сразу присылает копию: кто, когда и что.</span></li>
+    <li><span class="e">✏️</span><b>Изменённые сообщения</b><span>Видно, как было и как стало.</span></li>
+    <li><span class="e">🔥</span><b>Одноразовые фото и кружки</b><span>Копия, если ответить на них до просмотра.</span></li>
+    <li><span class="e">🛡</span><b>Удалённый чат целиком</b><span>Бот присылает весь чат файлом со всеми медиа. В Premium.</span></li>
+    <li><span class="e">⚠️</span><b>Защита от мошенников</b><span>Предупреждает об опасных ссылках и файлах в новых чатах.</span></li>
+    <li><span class="e">🔐</span><b>Приватность</b><span>Переписка хранится зашифрованной. Удалить свои данные можно в два нажатия.</span></li>
+  </ul>
+</div></section>
 
-<h2>Тарифы</h2>
-<table>
-<tr><th>Тариф</th><th>Цена</th><th>Что даёт</th></tr>
-<tr><td>⭐ Standard</td><td>Бесплатно, без срока</td><td>Удалённые и изменённые сообщения, медиа, хранение 30 дней</td></tr>
-<tr><td>👑 Premium</td><td>от 70 ₽ за 10 дней</td><td>Хранение до 6 месяцев, удалённый чат целиком файлом, без ограничений выгрузки</td></tr>
-</table>
+<section id="how"><div class="wrap">
+  <h2 class="display">Подключение за минуту</h2>
+  <ol class="steps">
+    <li><b>Откройте бота</b><span>Нажмите «Старт» в <a href="https://t.me/THE_SaveChatBot?start=src_site">@THE_SaveChatBot</a>.</span></li>
+    <li><b>Настройки Telegram</b><span>Telegram для бизнеса → Автоматизация чатов.</span></li>
+    <li><b>Добавьте бота</b><span>Вставьте @THE_SaveChatBot и нажмите «Добавить».</span></li>
+  </ol>
+  <p class="after">С этого момента бот сохраняет переписку. Telegram Premium не нужен.</p>
+</div></section>
 
-<h2 id="faq">Частые вопросы</h2>
-<details><summary>Можно ли увидеть удалённое сообщение в Telegram?</summary><p>Сам Telegram удалённое не показывает и не хранит. Если заранее подключить THE.SaveBot, бот сохраняет сообщения и присылает копию, когда собеседник их удалит. Сообщения, удалённые до подключения, вернуть нельзя.</p></details>
-<details><summary>Собеседник узнает?</summary><p>Нет. Бот работает только на вашей стороне и ничего не пишет собеседнику.</p></details>
-<details><summary>Нужен ли Telegram Premium?</summary><p>Нет. «Автоматизация чатов» в Telegram доступна без Premium.</p></details>
-<details><summary>Кто видит мою переписку?</summary><p>Никто. Переписка хранится зашифрованной, не продаётся и не передаётся третьим лицам. Срок хранения ограничен, а удалить всё можно самому: «Личный кабинет» → «Удалить мои данные».</p></details>
-<details><summary>Как отключить бота?</summary><p>Настройки → Telegram для бизнеса → Автоматизация чатов → убрать бота. После этого он ничего не сохраняет.</p></details>
+<section id="price"><div class="wrap">
+  <h2 class="display">Тарифы</h2>
+  <div class="plans">
+    <div class="plan"><h3>Standard</h3><p class="price">Бесплатно и без срока</p>
+      <ul><li>Удалённые и изменённые сообщения</li><li>Фото, голосовые, кружки</li><li>Хранение 30 дней</li></ul></div>
+    <div class="plan pro"><h3>Premium</h3><p class="price">от 70 ₽ за 10 дней</p>
+      <ul><li>Хранение до 6 месяцев</li><li>Удалённый чат целиком файлом</li><li>Выгрузка без ограничений</li></ul></div>
+  </div>
+</div></section>
+
+<section id="faq"><div class="wrap">
+  <h2 class="display">Вопросы</h2>
+  <details><summary>Можно ли увидеть удалённое сообщение в Telegram?</summary><p>Сам Telegram удалённое не показывает и не хранит. Если заранее подключить THE.SaveBot, бот сохраняет сообщения и присылает копию, когда собеседник их удалит. Сообщения, удалённые до подключения, вернуть нельзя.</p></details>
+  <details><summary>Собеседник узнает?</summary><p>Нет. Бот работает только на вашей стороне и ничего не пишет собеседнику.</p></details>
+  <details><summary>Нужен ли Telegram Premium?</summary><p>Нет. «Автоматизация чатов» в Telegram доступна без Premium.</p></details>
+  <details><summary>Кто видит мою переписку?</summary><p>Никто. Переписка хранится зашифрованной, не продаётся и не передаётся третьим лицам. Срок хранения ограничен, а удалить всё можно самому: «Личный кабинет» → «Удалить мои данные».</p></details>
+  <details><summary>Как отключить бота?</summary><p>Настройки → Telegram для бизнеса → Автоматизация чатов → убрать бота. После этого он ничего не сохраняет.</p></details>
+</div></section>
+
+<section class="final"><div class="wrap">
+  <p class="mark display">THE.</p>
+  <a class="btn" href="https://t.me/THE_SaveChatBot?start=src_site">Открыть бота в Telegram</a>
+</div></section>
 </main>
+
 <footer><div class="wrap"><span>© 2026 THE.SaveBot</span><span class="sp"></span><a href="privacy.html">Политика конфиденциальности</a><a href="terms.html">Условия использования</a></div></footer>
 </body>
 </html>
